@@ -7,15 +7,15 @@ require('dotenv').config();
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 const bot = mineflayer.createBot({
-  host: process.env.MINECRAFT_HOST || 'localhost',
-  port: parseInt(process.env.MINECRAFT_PORT) || 25565,
-  username: process.env.MINECRAFT_USERNAME || 'BotAI'
+  host: process.env.MINECRAFT_HOST || '146.19.48.159',
+  port: parseInt(process.env.MINECRAFT_PORT) || 25651,
+  username: process.env.MINECRAFT_USERNAME || 'HellRay'
 });
 
 bot.loadPlugin(pathfinder);
 
 bot.on('spawn', () => {
-  bot.chat('Привет! Я ИИ-бот на Railway!');
+  bot.chat('Привет! Я ИИ-бот от Egoistong!');
   const defaultMovements = new Movements(bot);
   bot.pathfinder.setMovements(defaultMovements);
 });
